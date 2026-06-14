@@ -589,6 +589,23 @@ ul, ol { list-style: none; }
 .sp-h1 { top: 40%; left: 42%; font-size: 0.75rem; animation-delay: 0.6s; color: var(--cream); }
 .sp-h2 { top: 18%; right: 30%; font-size: 0.55rem; animation-delay: 1.8s; color: var(--cream); }
 
+/* Vinilo giratorio */
+.vinyl {
+  position: absolute;
+  bottom: -4%;
+  left: 4%;
+  width: clamp(160px, 18vw, 240px);
+  opacity: 0.9;
+  animation: spinVinyl 8s linear infinite;
+  transform-origin: center center;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.45));
+  z-index: 1;
+}
+.vinyl svg { display: block; width: 100%; height: auto; }
+@keyframes spinVinyl {
+  to { transform: rotate(360deg); }
+}
+
 /* ══════════════════════════════════════
    FOOTER
 ══════════════════════════════════════ */
@@ -739,20 +756,44 @@ ul, ol { list-style: none; }
   .hero__inner { flex-direction: column; padding-top: 8rem; text-align: center; }
   .hero__left { flex: none; padding-right: 0; }
   .hero__dash { margin-left: auto; margin-right: auto; }
-  .hero__circle-area { min-height: 380px; }
-  .hero__circle-wrap { width: 280px; height: 280px; }
+  .hero__circle-area {
+    min-height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0;
+    padding-bottom: 2rem;
+  }
+  .hero__circle-wrap { width: 280px; height: 280px; flex-shrink: 0; }
+  /* Flor al lado del círculo en tablet/móvil */
+  .deco--flor-left {
+    position: relative;
+    width: clamp(110px, 22vw, 160px);
+    bottom: auto;
+    left: auto;
+    align-self: flex-end;
+    margin-left: -1rem;
+    flex-shrink: 0;
+  }
   .sobre-mi__grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .sobre-mi__photos { max-width: 380px; margin: 0 auto; }
   .proceso__header { flex-direction: column; align-items: flex-start; }
   .proceso__grid { grid-template-columns: repeat(2, 1fr); }
   .footer__inner { flex-direction: column; text-align: center; }
+  /* Vinilo más pequeño en tablet */
+  .vinyl { width: clamp(120px, 16vw, 180px); }
 }
 @media (max-width: 640px) {
   .nav { padding: 1.2rem 1.5rem; }
   .container { padding: 0 1.5rem; }
   .hero__inner { padding: 7rem 1.5rem 3rem; }
-  .hero__circle-wrap { width: 240px; height: 240px; }
+  .hero__circle-wrap { width: 200px; height: 200px; }
+  .deco--flor-left { width: 100px; margin-left: -0.5rem; }
+  .deco--cam-top { width: 60px; }
   .proj-card { flex: 0 0 calc(50% - 0.65rem); }
   .proceso__grid { grid-template-columns: repeat(2, 1fr); }
   .footer { padding: 1.5rem; }
+  /* Vinilo en móvil */
+  .vinyl { width: 130px; bottom: -2%; left: 2%; }
 }
