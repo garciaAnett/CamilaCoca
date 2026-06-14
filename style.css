@@ -847,7 +847,7 @@ ul, ol { list-style: none; }
 /* ── Móvil pequeño ≤ 425px ── */
 @media (max-width: 425px) {
   .cam-hablemos {
-    width: 70px;
+    width: 95px;
     top: 4.5%;
     right: 4%;
     bottom: auto;
