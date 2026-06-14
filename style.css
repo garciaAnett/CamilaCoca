@@ -293,28 +293,30 @@ ul, ol { list-style: none; }
 .btn-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
   font-size: 0.58rem;
   font-weight: 600;
   letter-spacing: 0.16em;
-  color: var(--wine-deep);
-  border-bottom: 1px solid var(--wine-deep);
-  padding-bottom: 0.2rem;
-  transition: opacity 0.25s;
+  color: var(--cream);
+  background: var(--wine-deep);
+  padding: 0.7rem 1.4rem 0.7rem 1.6rem;
+  border-radius: 2px;
+  transition: background 0.25s var(--ease), transform 0.2s;
 }
-.btn-link:hover { opacity: 0.6; }
+.btn-link:hover {
+  background: #3d0e15;
+  transform: translateY(-1px);
+}
 .arrow-icon {
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 0;
   display: flex;
   align-items: center;
-  border: 1px solid var(--wine-deep);
+  justify-content: center;
+  border: 1px solid rgba(224,204,179,0.5);
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  flex-shrink: 0;
 }
 .text-center { text-align: center; }
 
@@ -397,11 +399,23 @@ ul, ol { list-style: none; }
 .universos {
   position: relative;
   padding: 7rem 0;
-  background: var(--bg-alt);
-  border-top: 1px solid rgba(81,21,31,0.07);
+  background: var(--wine);
+  border-top: none;
 }
-.sp-u1 { top: 6%; left: 4%; font-size: 0.75rem; animation-delay: 0.3s; }
-.sp-u2 { bottom: 8%; right: 6%; font-size: 0.55rem; animation-delay: 1.5s; }
+.universos .sec-title { color: var(--cream); }
+.universos .sec-dash  { background: var(--cream); }
+.universos .proj-card h3 { color: var(--cream); }
+.universos .proj-card p  { color: rgba(224,204,179,0.7); }
+.universos .text-center .btn-link {
+  background: var(--wine-deep);
+}
+.sp-u1 { top: 6%; left: 4%; font-size: 0.75rem; animation-delay: 0.3s; color: var(--cream); }
+.sp-u2 { bottom: 8%; right: 6%; font-size: 0.55rem; animation-delay: 1.5s; color: var(--cream); }
+.universos .carousel__btn {
+  border-color: rgba(224,204,179,0.35);
+  color: var(--cream);
+}
+.universos .carousel__btn:hover { background: rgba(224,204,179,0.15); }
 
 .carousel {
   display: flex;
@@ -544,16 +558,18 @@ ul, ol { list-style: none; }
 .hablemos {
   position: relative;
   padding: 7rem 0;
-  background: var(--bg);
-  border-top: 1px solid rgba(81,21,31,0.09);
+  background: var(--wine);
+  border-top: none;
   overflow: hidden;
 }
 .hablemos .container { position: relative; z-index: 2; }
+.hablemos .sec-title { color: var(--cream); }
+.hablemos .sec-dash  { background: var(--cream); }
 .hablemos__text {
   font-size: 0.82rem;
   font-weight: 300;
   line-height: 1.9;
-  color: var(--text);
+  color: rgba(224,204,179,0.85);
   margin: 1.5rem 0 2.5rem;
 }
 .deco--cam-hablemos {
@@ -570,8 +586,8 @@ ul, ol { list-style: none; }
   width: clamp(150px, 14vw, 220px);
   opacity: 0.45;
 }
-.sp-h1 { top: 40%; left: 42%; font-size: 0.75rem; animation-delay: 0.6s; }
-.sp-h2 { top: 18%; right: 30%; font-size: 0.55rem; animation-delay: 1.8s; }
+.sp-h1 { top: 40%; left: 42%; font-size: 0.75rem; animation-delay: 0.6s; color: var(--cream); }
+.sp-h2 { top: 18%; right: 30%; font-size: 0.55rem; animation-delay: 1.8s; color: var(--cream); }
 
 /* ══════════════════════════════════════
    FOOTER
