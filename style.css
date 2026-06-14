@@ -829,7 +829,7 @@ ul, ol { list-style: none; }
   .proceso__header { flex-direction: column; align-items: flex-start; }
   .proceso__grid { grid-template-columns: repeat(2, 1fr); }
   .footer__inner { flex-direction: column; text-align: center; }
-  .cam-hablemos { width: clamp(130px, 15vw, 180px); }
+  .cam-hablemos { width: clamp(220px, 28vw, 300px); }
 }
 @media (max-width: 640px) {
   .nav { padding: 1.2rem 1.5rem; }
@@ -841,5 +841,5 @@ ul, ol { list-style: none; }
   .proj-card { flex: 0 0 calc(50% - 0.65rem); }
   .proceso__grid { grid-template-columns: repeat(2, 1fr); }
   .footer { padding: 1.5rem; }
-  .cam-hablemos { width: 120px; right: 2%; bottom: 5%; }
+  .cam-hablemos { width: 200px; right: 2%; bottom: 5%; }
 }
