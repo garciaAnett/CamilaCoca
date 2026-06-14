@@ -271,84 +271,11 @@
     <img src="imagenes/florCrema.png"  class="deco deco--flor-hablemos"  alt="">
     <img src="imagenes/camaraCrema.png" class="deco deco--cam-hablemos" alt="">
 
-    <!-- Vinilo al lado DERECHO -->
-    <div class="vinyl" aria-hidden="true">
-      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <!-- gradiente sutil para dar volumen al disco -->
-          <radialGradient id="discGrad" cx="40%" cy="38%" r="60%">
-            <stop offset="0%"   stop-color="#2a0d12"/>
-            <stop offset="100%" stop-color="#0b0306"/>
-          </radialGradient>
-          <!-- path circular para el texto de la etiqueta -->
-          <path id="labelCircle"
-            d="M 150,150 m -62,0 a 62,62 0 1,1 124,0 a 62,62 0 1,1 -124,0"/>
-        </defs>
-
-        <!-- Disco exterior -->
-        <circle cx="150" cy="150" r="148" fill="url(#discGrad)"/>
-
-        <!-- Surcos — muchos anillos finos alternados claro/oscuro -->
-        <circle cx="150" cy="150" r="145" fill="none" stroke="#1e080d" stroke-width="1.2"/>
-        <circle cx="150" cy="150" r="142" fill="none" stroke="#280b10" stroke-width="0.7"/>
-        <circle cx="150" cy="150" r="139" fill="none" stroke="#1e080d" stroke-width="1.1"/>
-        <circle cx="150" cy="150" r="136" fill="none" stroke="#280b10" stroke-width="0.7"/>
-        <circle cx="150" cy="150" r="133" fill="none" stroke="#1e080d" stroke-width="1.1"/>
-        <circle cx="150" cy="150" r="130" fill="none" stroke="#280b10" stroke-width="0.7"/>
-        <circle cx="150" cy="150" r="127" fill="none" stroke="#1e080d" stroke-width="1.0"/>
-        <circle cx="150" cy="150" r="124" fill="none" stroke="#280b10" stroke-width="0.7"/>
-        <circle cx="150" cy="150" r="121" fill="none" stroke="#1e080d" stroke-width="1.0"/>
-        <circle cx="150" cy="150" r="118" fill="none" stroke="#280b10" stroke-width="0.6"/>
-        <circle cx="150" cy="150" r="115" fill="none" stroke="#1e080d" stroke-width="1.0"/>
-        <circle cx="150" cy="150" r="112" fill="none" stroke="#280b10" stroke-width="0.6"/>
-        <circle cx="150" cy="150" r="109" fill="none" stroke="#1e080d" stroke-width="0.9"/>
-        <circle cx="150" cy="150" r="106" fill="none" stroke="#280b10" stroke-width="0.6"/>
-        <circle cx="150" cy="150" r="103" fill="none" stroke="#1e080d" stroke-width="0.9"/>
-        <circle cx="150" cy="150" r="100" fill="none" stroke="#280b10" stroke-width="0.6"/>
-        <circle cx="150" cy="150" r="97"  fill="none" stroke="#1e080d" stroke-width="0.8"/>
-        <circle cx="150" cy="150" r="94"  fill="none" stroke="#280b10" stroke-width="0.5"/>
-        <circle cx="150" cy="150" r="91"  fill="none" stroke="#1e080d" stroke-width="0.8"/>
-        <circle cx="150" cy="150" r="88"  fill="none" stroke="#280b10" stroke-width="0.5"/>
-        <circle cx="150" cy="150" r="85"  fill="none" stroke="#1e080d" stroke-width="0.8"/>
-        <circle cx="150" cy="150" r="82"  fill="none" stroke="#280b10" stroke-width="0.5"/>
-        <circle cx="150" cy="150" r="79"  fill="none" stroke="#1e080d" stroke-width="0.7"/>
-        <circle cx="150" cy="150" r="76"  fill="none" stroke="#280b10" stroke-width="0.5"/>
-        <circle cx="150" cy="150" r="73"  fill="none" stroke="#1e080d" stroke-width="0.7"/>
-
-        <!-- Reflejo sutil -->
-        <ellipse cx="112" cy="100" rx="22" ry="10"
-          fill="rgba(255,255,255,0.04)" transform="rotate(-40 112 100)"/>
-
-        <!-- Etiqueta central — crema -->
-        <circle cx="150" cy="150" r="68" fill="#E0CCB3"/>
-        <circle cx="150" cy="150" r="65" fill="none" stroke="#B5AAAA" stroke-width="0.6"/>
-
-        <!-- Texto circular en la etiqueta -->
-        <text font-family="Georgia, serif" font-size="7.5" fill="#51151F"
-              font-weight="400" letter-spacing="3.5">
-          <textPath href="#labelCircle" startOffset="2%">
-            · DISEÑO · FOTOGRAFÍA · DIRECCIÓN DE ARTE ·
-          </textPath>
-        </text>
-
-        <!-- Línea decorativa -->
-        <line x1="120" y1="140" x2="180" y2="140"
-              stroke="#51151F" stroke-width="0.5" opacity="0.4"/>
-
-        <!-- CAMIRA -->
-        <text x="150" y="156" text-anchor="middle"
-              font-family="Georgia, serif" font-size="14"
-              font-weight="600" fill="#51151F" letter-spacing="4">CAMIRA</text>
-
-        <!-- Año -->
-        <text x="150" y="168" text-anchor="middle"
-              font-family="Georgia, serif" font-size="6"
-              fill="#51151F" letter-spacing="2" opacity="0.6">✦ 2024 ✦</text>
-
-        <!-- Agujero central -->
-        <circle cx="150" cy="150" r="6"  fill="#E0CCB3" opacity="0.3"/>
-        <circle cx="150" cy="150" r="4"  fill="#1a0608"/>
-      </svg>
+    <!-- Cámara animada al lado DERECHO -->
+    <div class="cam-hablemos" aria-hidden="true">
+      <div class="cam-flash-ring"></div>
+      <div class="cam-flash-dot"></div>
+      <img src="imagenes/camra-P.png" alt="Cámara Canon EOS">
     </div>
 
     <div class="container">
