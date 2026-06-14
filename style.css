@@ -399,7 +399,7 @@ ul, ol { list-style: none; }
 .universos {
   position: relative;
   padding: 7rem 0;
-  background: var(--wine);
+  background: var(--wine-deep);
   border-top: none;
 }
 .universos .sec-title { color: var(--cream); }
@@ -558,7 +558,7 @@ ul, ol { list-style: none; }
 .hablemos {
   position: relative;
   padding: 7rem 0;
-  background: var(--wine);
+  background: var(--wine-deep);
   border-top: none;
   overflow: hidden;
 }
