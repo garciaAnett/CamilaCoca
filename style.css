@@ -594,7 +594,7 @@ ul, ol { list-style: none; }
   position: absolute;
   right: 3%;
   bottom: 8%;
-  width: clamp(160px, 16vw, 220px);
+  width: clamp(200px, 20vw, 280px);
   z-index: 2;
   animation: camFloat 5s ease-in-out infinite;
   filter: drop-shadow(0 10px 24px rgba(0,0,0,0.5));
