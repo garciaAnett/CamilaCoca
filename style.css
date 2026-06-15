@@ -6,8 +6,8 @@
 
 /* ── Variables ── */
 :root {
-  --bg:        #f9f4ee;
-  --bg-alt:    #f2ebe0;
+  --bg:        #D2BA96;
+  --bg-alt:    #C8AD8A;
   --cream:     #E0CCB3;
   --rose:      #B5AAAA;
   --wine-deep: #51151F;
@@ -45,7 +45,7 @@ ul, ol { list-style: none; }
   transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease);
 }
 .nav.scrolled {
-  background: rgba(249, 244, 238, 0.95);
+  background: rgba(210, 186, 150, 0.95);
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(81, 21, 31, 0.08);
 }
@@ -182,7 +182,7 @@ ul, ol { list-style: none; }
   inset: 28px;
   border-radius: 50%;
   overflow: hidden;
-  background: var(--cream);
+  background: var(--bg);
 }
 .hero__circle-img img {
   width: 100%;
@@ -216,16 +216,31 @@ ul, ol { list-style: none; }
 .deco { position: absolute; pointer-events: none; user-select: none; }
 
 .deco--cam-top {
-  top: 8%;
-  right: 8%;
-  width: clamp(80px, 8vw, 130px);
-  opacity: 0.65;
+  top: 5%;
+  right: 6%;
+  width: clamp(170px, 18vw, 260px);
+  opacity: 0.75;
 }
 .deco--flor-left {
   bottom: 0%;
   left: -1%;
   width: clamp(200px, 22vw, 300px);
   opacity: 0.75;
+}
+.deco--flor-left-back {
+  top: 2%;
+  bottom: auto;
+  left: 2%;
+  opacity: 0.85;
+  transform: rotate(-20deg) scaleX(-1);
+  z-index: 0;
+}
+.deco--flor-left-front {
+  bottom: 0%;
+  left: 2%;
+  opacity: 0.9;
+  transform: rotate(5deg);
+  z-index: 1;
 }
 .deco--vinyl {
   bottom: 14%;
@@ -354,51 +369,6 @@ ul, ol { list-style: none; }
   width: 100%;
   height: auto;
   display: block;
-}
-/* Destello completo sobre la foto */
-.sm-img-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 240, 0.88);
-  opacity: 0;
-  animation: photoFlash 3.5s ease-out infinite;
-  pointer-events: none;
-  z-index: 2;
-}
-.sm-flash-ring {
-  position: absolute;
-  top: 60%;
-  left: calc(50% - 40px);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: radial-gradient(circle,
-    rgba(255,255,240,0.99) 0%,
-    rgba(255,240,200,0.7) 30%,
-    transparent 70%);
-  animation: flashBurst 3.5s ease-out infinite;
-  pointer-events: none;
-  transform-origin: center;
-  z-index: 3;
-}
-.sm-flash-dot {
-  position: absolute;
-  top: calc(60% + 32px);
-  left: calc(50% - 8px);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: white;
-  animation: flashDot 3.5s ease-out infinite;
-  pointer-events: none;
-  z-index: 4;
-}
-@keyframes photoFlash {
-  0%, 57%, 100% { opacity: 0; }
-  60%           { opacity: 0.9; }
-  65%           { opacity: 0.4; }
-  70%           { opacity: 0; }
 }
 
 .sobre-mi__text { padding: 1rem 0; }
@@ -832,45 +802,51 @@ ul, ol { list-style: none; }
   .proc-card:nth-child(4),
   .proc-card:nth-child(5) { grid-column: span 1; }
 }
+/* ── Tablet ≤ 900px: mantiene 2 columnas como el diseño de referencia ── */
 @media (max-width: 900px) {
   .nav__links { display: none; }
-  .hero__inner { flex-direction: column; padding-top: 8rem; text-align: center; }
-  .hero__left { flex: none; padding-right: 0; }
-  .hero__dash { margin-left: auto; margin-right: auto; }
-  .hero__circle-area {
-    min-height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 0;
-    padding-bottom: 2rem;
-  }
-  .hero__circle-wrap { width: 280px; height: 280px; flex-shrink: 0; }
-  /* Flor al lado del círculo en tablet/móvil */
-  .deco--flor-left {
-    position: relative;
-    width: clamp(110px, 22vw, 160px);
-    bottom: auto;
-    left: auto;
-    align-self: flex-end;
-    margin-left: -1rem;
-    flex-shrink: 0;
-  }
+  .hero__inner { padding: 6rem 2rem 3rem; }
+  .hero__left { flex: 0 0 46%; padding-right: 1.5rem; }
+  .hero__circle-area { min-height: 400px; }
+  .hero__circle-wrap { width: 260px; height: 260px; }
+  .deco--flor-left { width: clamp(140px, 20vw, 200px); }
+  .deco--flor-left-back { left: 3%; top: 3%; }
   .sobre-mi__grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .sm-img-wrap { max-width: 420px; margin: 0 auto; }
   .proceso__header { flex-direction: column; align-items: flex-start; }
   .proceso__grid { grid-template-columns: repeat(2, 1fr); }
   .footer__inner { flex-direction: column; text-align: center; }
-  .cam-hablemos { width: clamp(220px, 28vw, 300px); }
+  .cam-hablemos { width: clamp(180px, 24vw, 280px); }
 }
+
+/* ── Móvil ≤ 640px: círculo primero, título abajo ── */
 @media (max-width: 640px) {
   .nav { padding: 1.2rem 1.5rem; }
   .container { padding: 0 1.5rem; }
-  .hero__inner { padding: 7rem 1.5rem 3rem; }
-  .hero__circle-wrap { width: 200px; height: 200px; }
-  .deco--flor-left { width: 100px; margin-left: -0.5rem; }
-  .deco--cam-top { width: 60px; }
+  .hero { min-height: auto; }
+  .hero__inner {
+    flex-direction: column;
+    padding: 5rem 1rem 2.5rem;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .hero__left { flex: none; padding-right: 0; }
+  .hero__dash { margin-left: auto; margin-right: auto; }
+  .hero__tagline { margin-bottom: 1.6rem; }
+  .hero__circle-area {
+    position: relative;
+    min-height: 320px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .hero__circle-wrap { width: 220px; height: 220px; }
+  .deco--flor-left       { width: 110px; }
+  .deco--flor-left-back  { top: 2%;    bottom: auto; left: 0%; }
+  .deco--flor-left-front { bottom: 2%; top: auto;    left: 0%; }
+  .deco--cam-top { width: 120px; top: 0%; right: 2%; }
+  .scroll-hint { display: none; }
   .proj-card { flex: 0 0 calc(50% - 0.65rem); }
   .proceso__grid { grid-template-columns: repeat(2, 1fr); }
   .footer { padding: 1.5rem; }
@@ -879,6 +855,23 @@ ul, ol { list-style: none; }
 
 /* ── Móvil pequeño ≤ 425px ── */
 @media (max-width: 425px) {
+  .hero__inner {
+    padding: 5.5rem 0.75rem 2rem;
+    gap: 2rem;
+  }
+  .hero__title {
+    font-size: clamp(2.8rem, 16vw, 3.8rem);
+    margin-bottom: 1.6rem;
+  }
+  .hero__sub  { margin-bottom: 1.4rem; }
+  .hero__dash { margin-bottom: 1.6rem; }
+  .hero__tagline { margin-bottom: 2rem; line-height: 2; }
+  .hero__circle-area { min-height: 380px; }
+  .hero__circle-wrap { width: 260px; height: 260px; }
+  .deco--flor-left       { width: 140px; }
+  .deco--flor-left-back  { top: 0%;    bottom: auto; left: -4%; }
+  .deco--flor-left-front { bottom: 0%; top: auto;    left: -4%; }
+  .deco--cam-top { position: absolute; top: -2%; right: 1%; width: 150px; }
   .cam-hablemos {
     width: 95px;
     top: 4.5%;
