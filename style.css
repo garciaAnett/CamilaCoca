@@ -346,27 +346,60 @@ ul, ol { list-style: none; }
   gap: 4rem;
   align-items: center;
 }
-.sobre-mi__photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-  align-items: start;
-}
-.sm-photo {
-  overflow: hidden;
-  border-radius: 2px;
-  background: var(--cream);
-}
-.sm-photo--a { aspect-ratio: 3/4; }
-.sm-photo--b { aspect-ratio: 3/4; margin-top: 2rem; }
-.sm-photo img {
+.sm-img-wrap {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(0.35) sepia(0.1);
-  transition: filter 0.4s;
 }
-.sm-photo:hover img { filter: grayscale(0) sepia(0); }
+.sm-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Destello completo sobre la foto */
+.sm-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 240, 0.88);
+  opacity: 0;
+  animation: photoFlash 3.5s ease-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+.sm-flash-ring {
+  position: absolute;
+  top: 36%;
+  left: 40%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255,255,240,0.99) 0%,
+    rgba(255,240,200,0.7) 30%,
+    transparent 70%);
+  animation: flashBurst 3.5s ease-out infinite;
+  pointer-events: none;
+  transform-origin: center;
+  z-index: 3;
+}
+.sm-flash-dot {
+  position: absolute;
+  top: calc(36% + 32px);
+  left: calc(40% + 32px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  animation: flashDot 3.5s ease-out infinite;
+  pointer-events: none;
+  z-index: 4;
+}
+@keyframes photoFlash {
+  0%, 57%, 100% { opacity: 0; }
+  60%           { opacity: 0.9; }
+  65%           { opacity: 0.4; }
+  70%           { opacity: 0; }
+}
 
 .sobre-mi__text { padding: 1rem 0; }
 .sobre-mi__text p {
@@ -825,7 +858,7 @@ ul, ol { list-style: none; }
     flex-shrink: 0;
   }
   .sobre-mi__grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .sobre-mi__photos { max-width: 380px; margin: 0 auto; }
+  .sm-img-wrap { max-width: 420px; margin: 0 auto; }
   .proceso__header { flex-direction: column; align-items: flex-start; }
   .proceso__grid { grid-template-columns: repeat(2, 1fr); }
   .footer__inner { flex-direction: column; text-align: center; }
