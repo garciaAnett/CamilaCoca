@@ -147,7 +147,7 @@
         <div class="carousel__viewport">
           <div class="carousel__track" id="carouselTrack">
 
-            <article class="proj-card">
+            <article class="proj-card" data-desc="Serie de fotografías conceptuales que exploran la luz, la emoción y la narrativa visual.">
               <div class="proj-card__img">
                 <img src="imagenes/florRoja.png" alt="Fotografía">
                 <span class="proj-num">01</span>
@@ -156,7 +156,7 @@
               <p>&nbsp;</p>
             </article>
 
-            <article class="proj-card">
+            <article class="proj-card" data-desc="Diseño editorial que combina tipografía, imagen y concepto para crear piezas con identidad propia.">
               <div class="proj-card__img">
                 <img src="imagenes/camaraCrema.png" alt="Editorial">
                 <span class="proj-num">02</span>
@@ -165,7 +165,7 @@
               <p>&nbsp;</p>
             </article>
 
-            <article class="proj-card">
+            <article class="proj-card" data-desc="Identidades visuales construidas desde la esencia de cada marca, con coherencia y carácter.">
               <div class="proj-card__img">
                 <img src="imagenes/florCrema.png" alt="Branding">
                 <span class="proj-num">03</span>
@@ -174,7 +174,7 @@
               <p>&nbsp;</p>
             </article>
 
-            <article class="proj-card">
+            <article class="proj-card" data-desc="Ilustraciones que traducen ideas y emociones en imágenes con estilo y sensibilidad propios.">
               <div class="proj-card__img">
                 <img src="imagenes/camara.png" alt="Ilustración">
                 <span class="proj-num">04</span>
@@ -183,7 +183,7 @@
               <p>&nbsp;</p>
             </article>
 
-            <article class="proj-card">
+            <article class="proj-card" data-desc="Packaging que protege, comunica y enamora desde el primer vistazo.">
               <div class="proj-card__img">
                 <img src="imagenes/camaraCrema.png" alt="Empaque">
                 <span class="proj-num">05</span>
@@ -307,6 +307,19 @@
       <span class="footer__copy">© 2026 CAMIRA · TODOS LOS DERECHOS RESERVADOS</span>
     </div>
   </footer>
+
+  <!-- ═══ MODAL PROYECTOS ═══ -->
+  <div class="proj-modal" id="projModal" role="dialog" aria-modal="true">
+    <div class="proj-modal__content">
+      <button class="proj-modal__close" id="projModalClose" aria-label="Cerrar">✕</button>
+      <img class="proj-modal__img" id="projModalImg" src="" alt="">
+      <div class="proj-modal__body">
+        <p class="proj-modal__num" id="projModalNum"></p>
+        <h3 class="proj-modal__title" id="projModalTitle"></h3>
+        <p class="proj-modal__desc" id="projModalDesc"></p>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

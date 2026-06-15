@@ -461,6 +461,16 @@ ul, ol { list-style: none; }
 .proj-card {
   flex: 0 0 calc(25% - 0.95rem);
   min-width: 0;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-28px);
+}
+@keyframes cardFall {
+  from { opacity: 0; transform: translateY(-28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.proj-card.card-visible {
+  animation: cardFall 0.45s var(--ease) both;
 }
 .proj-card__img {
   position: relative;
@@ -521,6 +531,80 @@ ul, ol { list-style: none; }
   border-color: var(--wine-deep);
 }
 .carousel__btn:disabled { opacity: 0.3; cursor: default; }
+
+/* Modal */
+.proj-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(40, 20, 20, 0.72);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.proj-modal.open { display: flex; }
+.proj-modal__content {
+  background: var(--bg);
+  max-width: 620px;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  animation: modalIn 0.35s var(--ease) both;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+.proj-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: var(--wine-deep);
+  border: none;
+  color: var(--cream);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: background 0.2s;
+}
+.proj-modal__close:hover { background: var(--wine); }
+.proj-modal__img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+.proj-modal__body { padding: 1.5rem 2rem 2rem; }
+.proj-modal__num {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--wine-deep);
+  opacity: 0.45;
+  margin-bottom: 0.35rem;
+}
+.proj-modal__title {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--wine-deep);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+.proj-modal__desc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--text);
+}
 
 /* ══════════════════════════════════════
    PROCESO CREATIVO
@@ -864,10 +948,10 @@ ul, ol { list-style: none; }
   .hero__circle-wrap { width: 220px; height: 220px; }
   .deco--cam-top { width: 120px; top: 0%; right: 2%; }
   .scroll-hint { display: none; }
-  .proj-card { flex: 0 0 calc(50% - 0.65rem); }
   .proceso__grid { grid-template-columns: repeat(2, 1fr); }
   .footer { padding: 1.5rem; }
   .cam-hablemos { width: 160px; right: 2%; top: 2%; bottom: auto; }
+  .proj-modal__body { padding: 1.25rem 1.5rem 1.75rem; }
 }
 
 /* ── Móvil pequeño ≤ 425px ── */
