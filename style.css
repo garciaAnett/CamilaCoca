@@ -368,8 +368,8 @@ ul, ol { list-style: none; }
 }
 .sm-flash-ring {
   position: absolute;
-  top: 36%;
-  left: 40%;
+  top: 60%;
+  left: calc(50% - 40px);
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -384,8 +384,8 @@ ul, ol { list-style: none; }
 }
 .sm-flash-dot {
   position: absolute;
-  top: calc(36% + 32px);
-  left: calc(40% + 32px);
+  top: calc(60% + 32px);
+  left: calc(50% - 8px);
   width: 16px;
   height: 16px;
   border-radius: 50%;
