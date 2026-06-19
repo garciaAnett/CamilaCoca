@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAMIRA — Fotografía</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav nav--gallery" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">CAMIRA</a>
+      <a href="index.html" class="btn-link btn-link--back">← VOLVER</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="gal-header">
+    <div class="container">
+      <p class="gal-header__num">01</p>
+      <h1 class="gal-header__title">FOTOGRAFÍA</h1>
+      <div class="sec-dash"></div>
+      <p class="gal-header__desc">Serie de fotografías conceptuales que exploran la luz, la emoción y la narrativa visual.</p>
+    </div>
+  </header>
+
+  <!-- ═══ GALERÍA PINTEREST ═══ -->
+  <section class="gal-grid-section">
+    <div class="container">
+      <div class="gal-masonry" id="galMasonry">
+
+        <div class="gal-item" data-title="Retrato en luz natural"
+             data-lugar="Cochabamba, Bolivia"
+             data-desc="Retrato conceptual capturado durante la hora dorada, aprovechando la luz natural que entraba por la ventana del estudio."
+             data-experiencia="Una sesión íntima donde la modelo transmitió vulnerabilidad y fuerza al mismo tiempo. La luz cálida del atardecer creó sombras suaves que acentuaron cada expresión.">
+          <img src="imagenes/fotoPrincipal.jpeg" alt="Retrato en luz natural">
+        </div>
+
+        <div class="gal-item" data-title="Sombras y textura"
+             data-lugar="Santa Cruz, Bolivia"
+             data-desc="Exploración de texturas y sombras en un espacio abandonado que servía como set natural."
+             data-experiencia="Descubrimos este lugar por casualidad mientras buscábamos locaciones. Las paredes desgastadas y la luz que se filtraba crearon una atmósfera perfecta para la narrativa visual.">
+          <img src="imagenes/foto2.png" alt="Sombras y textura">
+        </div>
+
+        <div class="gal-item" data-title="Color y emoción"
+             data-lugar="La Paz, Bolivia"
+             data-desc="Fotografía que juega con los tonos cálidos y la composición para transmitir nostalgia."
+             data-experiencia="Esta imagen fue parte de una serie sobre la memoria y los recuerdos. Usamos elementos cotidianos para construir un escenario que evocara calidez y pertenencia.">
+          <img src="imagenes/florRoja.png" alt="Color y emoción">
+        </div>
+
+        <div class="gal-item" data-title="Perspectiva urbana"
+             data-lugar="Cochabamba, Bolivia"
+             data-desc="Captura urbana que combina arquitectura y movimiento humano en un solo instante."
+             data-experiencia="Esperé casi una hora en esa esquina hasta que la composición perfecta se alineó: la luz, las líneas de la arquitectura y una figura en movimiento que completó la historia.">
+          <img src="imagenes/camaraCrema.png" alt="Perspectiva urbana">
+        </div>
+
+        <div class="gal-item" data-title="Fragmentos de luz"
+             data-lugar="Sucre, Bolivia"
+             data-desc="Serie minimalista que captura cómo la luz transforma objetos cotidianos en piezas visuales."
+             data-experiencia="Un ejercicio de observación: dedicar una mañana completa a fotografiar cómo la luz se movía por un espacio, revelando detalles que normalmente pasan desapercibidos.">
+          <img src="imagenes/florCrema.png" alt="Fragmentos de luz">
+        </div>
+
+        <div class="gal-item" data-title="Doble exposición"
+             data-lugar="Cochabamba, Bolivia"
+             data-desc="Técnica de doble exposición que fusiona el retrato con elementos naturales."
+             data-experiencia="Experimentamos con técnicas analógicas en formato digital. Cada imagen es el resultado de superponer dos mundos: el rostro humano y la naturaleza que lo rodea.">
+          <img src="imagenes/fotoPrincipal.jpeg" alt="Doble exposición">
+        </div>
+
+        <div class="gal-item" data-title="Silencio visual"
+             data-lugar="Tarija, Bolivia"
+             data-desc="Fotografía contemplativa que busca transmitir calma y quietud a través de la composición."
+             data-experiencia="Esta foto nació de un momento de pausa durante un viaje. A veces las mejores imágenes surgen cuando dejamos de buscar y simplemente observamos.">
+          <img src="imagenes/camara.png" alt="Silencio visual">
+        </div>
+
+        <div class="gal-item" data-title="Identidad y espacio"
+             data-lugar="La Paz, Bolivia"
+             data-desc="Retrato ambiental que integra al sujeto con su entorno para contar una historia más completa."
+             data-experiencia="Trabajamos con una paleta de colores tierra que reforzara la conexión entre la persona y el lugar. El resultado habla tanto del espacio como de quien lo habita.">
+          <img src="imagenes/foto2.png" alt="Identidad y espacio">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__logo">CAMIRA</span>
+      <nav class="footer__links" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/camiradesign?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">INSTAGRAM</a>
+        <a href="https://www.tiktok.com/@camiradesign">TIKTOK</a>
+        <a href="mailto:camira.design@gmail.com">EMAIL</a>
+      </nav>
+      <span class="footer__copy">© 2026 CAMIRA · TODOS LOS DERECHOS RESERVADOS</span>
+    </div>
+  </footer>
+
+  <!-- ═══ MODAL DETALLE FOTO ═══ -->
+  <div class="foto-modal" id="fotoModal">
+    <div class="foto-modal__content" id="fotoModalContent">
+      <button class="foto-modal__close" id="fotoModalClose">✕</button>
+      <div class="foto-modal__img-wrap">
+        <img class="foto-modal__img" id="fotoModalImg" src="" alt="">
+      </div>
+      <div class="foto-modal__body">
+        <h3 class="foto-modal__title" id="fotoModalTitle"></h3>
+        <p class="foto-modal__lugar" id="fotoModalLugar"></p>
+        <div class="foto-modal__sep"></div>
+        <p class="foto-modal__desc" id="fotoModalDesc"></p>
+        <h4 class="foto-modal__exp-label">EXPERIENCIA</h4>
+        <p class="foto-modal__exp" id="fotoModalExp"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="galeria.js"></script>
+</body>
+</html>

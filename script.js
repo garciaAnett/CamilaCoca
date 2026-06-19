@@ -151,9 +151,13 @@
   }, { threshold: 0.05 });
   observer.observe(track);
 
-  /* Modal al hacer click */
+  /* Click: navegar a galería o abrir modal */
   cards.forEach(card => {
     card.addEventListener('click', () => {
+      if (card.dataset.href) {
+        window.location.href = card.dataset.href;
+        return;
+      }
       mImg.src           = card.querySelector('.proj-card__img img').src;
       mImg.alt           = card.querySelector('.proj-card__img img').alt;
       mNum.textContent   = card.querySelector('.proj-num').textContent;
