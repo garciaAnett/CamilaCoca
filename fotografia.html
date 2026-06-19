@@ -30,65 +30,67 @@
     </div>
   </header>
 
-  <!-- ═══ GALERÍA PINTEREST ═══ -->
+  <!-- ═══ CATEGORÍAS ═══ -->
   <section class="gal-grid-section">
     <div class="container">
+
+      <div class="gal-tabs" id="galTabs">
+        <button class="gal-tab active" data-cat="editorial">EDITORIAL</button>
+        <button class="gal-tab" data-cat="publicitaria">PUBLICITARIA</button>
+        <button class="gal-tab" data-cat="documental">DOCUMENTAL</button>
+      </div>
+
       <div class="gal-masonry" id="galMasonry">
 
-        <div class="gal-item" data-title="Retrato en luz natural"
+        <!-- ── EDITORIAL ── -->
+        <div class="gal-item" data-cat="editorial"
+             data-title="Retrato en luz natural"
              data-lugar="Cochabamba, Bolivia"
              data-desc="Retrato conceptual capturado durante la hora dorada, aprovechando la luz natural que entraba por la ventana del estudio."
              data-experiencia="Una sesión íntima donde la modelo transmitió vulnerabilidad y fuerza al mismo tiempo. La luz cálida del atardecer creó sombras suaves que acentuaron cada expresión.">
-          <img src="imagenes/fotoPrincipal.jpeg" alt="Retrato en luz natural">
+          <img src="imagenes/foto Lu.JPG" alt="Retrato en luz natural">
         </div>
 
-        <div class="gal-item" data-title="Sombras y textura"
-             data-lugar="Santa Cruz, Bolivia"
-             data-desc="Exploración de texturas y sombras en un espacio abandonado que servía como set natural."
-             data-experiencia="Descubrimos este lugar por casualidad mientras buscábamos locaciones. Las paredes desgastadas y la luz que se filtraba crearon una atmósfera perfecta para la narrativa visual.">
-          <img src="imagenes/foto2.png" alt="Sombras y textura">
-        </div>
-
-        <div class="gal-item" data-title="Color y emoción"
-             data-lugar="La Paz, Bolivia"
-             data-desc="Fotografía que juega con los tonos cálidos y la composición para transmitir nostalgia."
-             data-experiencia="Esta imagen fue parte de una serie sobre la memoria y los recuerdos. Usamos elementos cotidianos para construir un escenario que evocara calidez y pertenencia.">
-          <img src="imagenes/florRoja.png" alt="Color y emoción">
-        </div>
-
-        <div class="gal-item" data-title="Perspectiva urbana"
+        <div class="gal-item" data-cat="editorial"
+             data-title="Identidad y espacio"
              data-lugar="Cochabamba, Bolivia"
-             data-desc="Captura urbana que combina arquitectura y movimiento humano en un solo instante."
-             data-experiencia="Esperé casi una hora en esa esquina hasta que la composición perfecta se alineó: la luz, las líneas de la arquitectura y una figura en movimiento que completó la historia.">
-          <img src="imagenes/camaraCrema.png" alt="Perspectiva urbana">
-        </div>
-
-        <div class="gal-item" data-title="Fragmentos de luz"
-             data-lugar="Sucre, Bolivia"
-             data-desc="Serie minimalista que captura cómo la luz transforma objetos cotidianos en piezas visuales."
-             data-experiencia="Un ejercicio de observación: dedicar una mañana completa a fotografiar cómo la luz se movía por un espacio, revelando detalles que normalmente pasan desapercibidos.">
-          <img src="imagenes/florCrema.png" alt="Fragmentos de luz">
-        </div>
-
-        <div class="gal-item" data-title="Doble exposición"
-             data-lugar="Cochabamba, Bolivia"
-             data-desc="Técnica de doble exposición que fusiona el retrato con elementos naturales."
-             data-experiencia="Experimentamos con técnicas analógicas en formato digital. Cada imagen es el resultado de superponer dos mundos: el rostro humano y la naturaleza que lo rodea.">
-          <img src="imagenes/fotoPrincipal.jpeg" alt="Doble exposición">
-        </div>
-
-        <div class="gal-item" data-title="Silencio visual"
-             data-lugar="Tarija, Bolivia"
-             data-desc="Fotografía contemplativa que busca transmitir calma y quietud a través de la composición."
-             data-experiencia="Esta foto nació de un momento de pausa durante un viaje. A veces las mejores imágenes surgen cuando dejamos de buscar y simplemente observamos.">
-          <img src="imagenes/camara.png" alt="Silencio visual">
-        </div>
-
-        <div class="gal-item" data-title="Identidad y espacio"
-             data-lugar="La Paz, Bolivia"
              data-desc="Retrato ambiental que integra al sujeto con su entorno para contar una historia más completa."
              data-experiencia="Trabajamos con una paleta de colores tierra que reforzara la conexión entre la persona y el lugar. El resultado habla tanto del espacio como de quien lo habita.">
           <img src="imagenes/foto2.png" alt="Identidad y espacio">
+        </div>
+
+        <div class="gal-item" data-cat="editorial"
+             data-title="Color y emoción"
+             data-lugar="Cochabamba, Bolivia"
+             data-desc="Fotografía que juega con los tonos cálidos y la composición para transmitir nostalgia."
+             data-experiencia="Esta imagen fue parte de una serie sobre la memoria y los recuerdos. Usamos elementos cotidianos para construir un escenario que evocara calidez y pertenencia.">
+          <img src="imagenes/fotoPrincipal.jpeg" alt="Color y emoción">
+        </div>
+
+        <!-- ── PUBLICITARIA ── -->
+        <div class="gal-item" data-cat="publicitaria"
+             data-title="Producto en escena"
+             data-lugar="Cochabamba, Bolivia"
+             data-desc="Fotografía publicitaria que presenta el producto dentro de un contexto visual atractivo y memorable."
+             data-experiencia="El reto fue crear un set que realzara el producto sin robarle protagonismo. Cada elemento de utilería fue elegido para complementar la paleta de colores y la narrativa de la marca.">
+          <img src="imagenes/final.jpg" alt="Producto en escena">
+        </div>
+
+        <div class="gal-item" data-cat="publicitaria"
+             data-title="Composición de marca"
+             data-lugar="Cochabamba, Bolivia"
+             data-desc="Imagen publicitaria que combina textura, color y producto para comunicar la esencia de una marca."
+             data-experiencia="Trabajamos con chocolate artesanal y la idea fue transmitir calidez y autenticidad. La iluminación lateral creó sombras que aportaron profundidad y elegancia a la composición.">
+          <img src="imagenes/choco.png" alt="Composición de marca">
+        </div>
+
+        <!-- ── DOCUMENTAL ── -->
+        <div class="gal-item" data-cat="documental"
+             data-title="Momento capturado"
+             data-lugar="Bolivia"
+             data-desc="Fotografía documental que captura un instante real, sin intervención ni puesta en escena."
+             data-experiencia="La fotografía documental exige paciencia y respeto por el momento. Esta imagen nació de observar sin interrumpir, dejando que la escena hablara por sí misma.">
+          <img src="imagenes/docuemntal.JPG" alt="Momento capturado">
         </div>
 
       </div>

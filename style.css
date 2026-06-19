@@ -487,6 +487,28 @@ ul, ol { list-style: none; }
   transition: transform 0.5s var(--ease);
 }
 .proj-card:hover .proj-card__img img { transform: scale(1.04); }
+.proj-card__ver-mas {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: rgba(81, 21, 31, 0.85);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  padding: 0.4rem 1rem;
+  border-radius: 2px;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  z-index: 2;
+}
+.proj-card:hover .proj-card__ver-mas {
+  opacity: 1;
+  transform: translateY(0);
+}
 .proj-num {
   position: absolute;
   bottom: 0.75rem;

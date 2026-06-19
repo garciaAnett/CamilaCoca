@@ -10,6 +10,33 @@
   onScroll();
 })();
 
+/* ── Filtrado por categoría ── */
+(function () {
+  const tabs  = document.querySelectorAll('.gal-tab');
+  const items = document.querySelectorAll('.gal-item[data-cat]');
+  if (!tabs.length) return;
+
+  function filter(cat) {
+    items.forEach(item => {
+      if (item.dataset.cat === cat) {
+        item.classList.remove('gal-hidden');
+        item.style.animation = 'none';
+        item.offsetHeight;
+        item.style.animation = '';
+      } else {
+        item.classList.add('gal-hidden');
+      }
+    });
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => filter(tab.dataset.cat));
+  });
+
+  filter('editorial');
+})();
+
 /* ── Modal detalle foto ── */
 (function () {
   const items = document.querySelectorAll('.gal-item');

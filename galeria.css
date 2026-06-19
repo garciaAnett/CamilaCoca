@@ -48,6 +48,42 @@
   color: var(--text-soft);
 }
 
+/* ── Tabs categorías ── */
+.gal-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+.gal-tab {
+  background: none;
+  border: 1px solid rgba(81, 21, 31, 0.25);
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--wine-deep);
+  padding: 0.6rem 1.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.gal-tab:hover {
+  background: rgba(81, 21, 31, 0.08);
+}
+.gal-tab.active {
+  background: var(--wine-deep);
+  color: var(--cream);
+  border-color: var(--wine-deep);
+}
+
+.gal-item[data-cat] {
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+}
+.gal-item.gal-hidden {
+  display: none;
+}
+
 /* ── Masonry grid (Pinterest) ── */
 .gal-grid-section {
   padding: 0 0 4rem;
