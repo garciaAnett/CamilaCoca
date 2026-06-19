@@ -2,6 +2,16 @@
    GALERÍA FOTOGRAFÍA — ESTILOS
 ═══════════════════════════════════════ */
 
+/* ── Layout: footer siempre abajo ── */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.gal-grid-section {
+  flex: 1;
+}
+
 /* ── Nav gallery ── */
 .nav--gallery {
   background: rgba(210, 186, 150, 0.95);
@@ -16,9 +26,16 @@
   padding: 0 2rem;
   height: 56px;
 }
-.btn-link--back {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+.gal-back {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--wine-deep);
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+.gal-back:hover {
+  opacity: 0.6;
 }
 
 /* ── Header ── */
