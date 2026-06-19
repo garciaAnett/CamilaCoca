@@ -47,7 +47,8 @@
              data-title="Retrato en luz natural"
              data-lugar="Cochabamba, Bolivia"
              data-desc="Retrato conceptual capturado durante la hora dorada, aprovechando la luz natural que entraba por la ventana del estudio."
-             data-experiencia="Una sesión íntima donde la modelo transmitió vulnerabilidad y fuerza al mismo tiempo. La luz cálida del atardecer creó sombras suaves que acentuaron cada expresión.">
+             data-experiencia="Una sesión íntima donde la modelo transmitió vulnerabilidad y fuerza al mismo tiempo. La luz cálida del atardecer creó sombras suaves que acentuaron cada expresión."
+             data-fotos="imagenes/foto2.png,imagenes/fotoPrincipal.jpeg,imagenes/foto Lu.JPG">
           <img src="imagenes/foto Lu.JPG" alt="Retrato en luz natural">
         </div>
 
@@ -55,7 +56,8 @@
              data-title="Identidad y espacio"
              data-lugar="Cochabamba, Bolivia"
              data-desc="Retrato ambiental que integra al sujeto con su entorno para contar una historia más completa."
-             data-experiencia="Trabajamos con una paleta de colores tierra que reforzara la conexión entre la persona y el lugar. El resultado habla tanto del espacio como de quien lo habita.">
+             data-experiencia="Trabajamos con una paleta de colores tierra que reforzara la conexión entre la persona y el lugar. El resultado habla tanto del espacio como de quien lo habita."
+             data-fotos="imagenes/foto Lu.JPG,imagenes/fotoPrincipal.jpeg,imagenes/foto2.png">
           <img src="imagenes/foto2.png" alt="Identidad y espacio">
         </div>
 
@@ -63,7 +65,8 @@
              data-title="Color y emoción"
              data-lugar="Cochabamba, Bolivia"
              data-desc="Fotografía que juega con los tonos cálidos y la composición para transmitir nostalgia."
-             data-experiencia="Esta imagen fue parte de una serie sobre la memoria y los recuerdos. Usamos elementos cotidianos para construir un escenario que evocara calidez y pertenencia.">
+             data-experiencia="Esta imagen fue parte de una serie sobre la memoria y los recuerdos. Usamos elementos cotidianos para construir un escenario que evocara calidez y pertenencia."
+             data-fotos="imagenes/foto Lu.JPG,imagenes/foto2.png,imagenes/fotoPrincipal.jpeg">
           <img src="imagenes/fotoPrincipal.jpeg" alt="Color y emoción">
         </div>
 
@@ -72,7 +75,8 @@
              data-title="Producto en escena"
              data-lugar="Cochabamba, Bolivia"
              data-desc="Fotografía publicitaria que presenta el producto dentro de un contexto visual atractivo y memorable."
-             data-experiencia="El reto fue crear un set que realzara el producto sin robarle protagonismo. Cada elemento de utilería fue elegido para complementar la paleta de colores y la narrativa de la marca.">
+             data-experiencia="El reto fue crear un set que realzara el producto sin robarle protagonismo. Cada elemento de utilería fue elegido para complementar la paleta de colores y la narrativa de la marca."
+             data-fotos="imagenes/choco.png,imagenes/final.jpg,imagenes/foto Lu.JPG">
           <img src="imagenes/final.jpg" alt="Producto en escena">
         </div>
 
@@ -80,7 +84,8 @@
              data-title="Composición de marca"
              data-lugar="Cochabamba, Bolivia"
              data-desc="Imagen publicitaria que combina textura, color y producto para comunicar la esencia de una marca."
-             data-experiencia="Trabajamos con chocolate artesanal y la idea fue transmitir calidez y autenticidad. La iluminación lateral creó sombras que aportaron profundidad y elegancia a la composición.">
+             data-experiencia="Trabajamos con chocolate artesanal y la idea fue transmitir calidez y autenticidad. La iluminación lateral creó sombras que aportaron profundidad y elegancia a la composición."
+             data-fotos="imagenes/final.jpg,imagenes/choco.png,imagenes/foto2.png">
           <img src="imagenes/choco.png" alt="Composición de marca">
         </div>
 
@@ -89,7 +94,8 @@
              data-title="Momento capturado"
              data-lugar="Bolivia"
              data-desc="Fotografía documental que captura un instante real, sin intervención ni puesta en escena."
-             data-experiencia="La fotografía documental exige paciencia y respeto por el momento. Esta imagen nació de observar sin interrumpir, dejando que la escena hablara por sí misma.">
+             data-experiencia="La fotografía documental exige paciencia y respeto por el momento. Esta imagen nació de observar sin interrumpir, dejando que la escena hablara por sí misma."
+             data-fotos="imagenes/foto Lu.JPG,imagenes/foto2.png,imagenes/fotoPrincipal.jpeg">
           <img src="imagenes/docuemntal.JPG" alt="Momento capturado">
         </div>
 
@@ -124,8 +130,35 @@
         <p class="foto-modal__desc" id="fotoModalDesc"></p>
         <h4 class="foto-modal__exp-label">EXPERIENCIA</h4>
         <p class="foto-modal__exp" id="fotoModalExp"></p>
+
+        <div class="foto-modal__sep"></div>
+
+        <h4 class="foto-modal__exp-label">MÁS FOTOS DEL EVENTO</h4>
+        <div class="foto-modal__carousel">
+          <button class="foto-modal__car-btn foto-modal__car-btn--prev" id="fotoCarPrev">‹</button>
+          <div class="foto-modal__car-viewport">
+            <div class="foto-modal__car-track" id="fotoCarTrack"></div>
+          </div>
+          <button class="foto-modal__car-btn foto-modal__car-btn--next" id="fotoCarNext">›</button>
+        </div>
+
+        <div class="foto-modal__sep"></div>
+
+        <div class="foto-modal__precio">
+          <div class="foto-modal__precio-info">
+            <h4 class="foto-modal__exp-label">COSTO DEL EVENTO</h4>
+            <p class="foto-modal__precio-valor">45 Bs<span>/hora</span></p>
+          </div>
+          <a href="https://wa.me/59168923029?text=%C2%A1Hola%20Camira!%20Me%20interesa%20una%20sesi%C3%B3n%20fotogr%C3%A1fica%20%F0%9F%93%B8" target="_blank" rel="noopener" class="foto-modal__precio-btn">CONSULTAR</a>
+        </div>
       </div>
     </div>
+  </div>
+
+  <!-- ═══ LIGHTBOX FOTO AMPLIADA ═══ -->
+  <div class="foto-lightbox" id="fotoLightbox">
+    <button class="foto-lightbox__close" id="fotoLightboxClose">✕</button>
+    <img class="foto-lightbox__img" id="fotoLightboxImg" src="" alt="">
   </div>
 
   <script src="galeria.js"></script>
