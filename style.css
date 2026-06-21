@@ -998,4 +998,26 @@ ul, ol { list-style: none; }
     right: 2%;
     bottom: auto;
   }
+  .proj-card {
+    flex: 0 0 calc(100% - 0.5rem);
+  }
+  .proj-card__img {
+    aspect-ratio: 3/4;
+    margin-bottom: 0.6rem;
+  }
+  .proj-card h3 {
+    font-size: 0.7rem;
+    margin-bottom: 0.15rem;
+  }
+  .proj-card p {
+    font-size: 0.6rem;
+  }
+  .carousel__btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  .carousel {
+    gap: 0.5rem;
+  }
 }
