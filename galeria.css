@@ -128,14 +128,24 @@ body {
   transform: translateY(20px);
   animation: galFadeIn 0.5s var(--ease) both;
 }
-.gal-item:nth-child(1) { animation-delay: 0ms; }
-.gal-item:nth-child(2) { animation-delay: 80ms; }
-.gal-item:nth-child(3) { animation-delay: 160ms; }
-.gal-item:nth-child(4) { animation-delay: 240ms; }
-.gal-item:nth-child(5) { animation-delay: 320ms; }
-.gal-item:nth-child(6) { animation-delay: 400ms; }
-.gal-item:nth-child(7) { animation-delay: 480ms; }
-.gal-item:nth-child(8) { animation-delay: 560ms; }
+.gal-item:nth-child(1)  { animation-delay: 0ms; }
+.gal-item:nth-child(2)  { animation-delay: 60ms; }
+.gal-item:nth-child(3)  { animation-delay: 120ms; }
+.gal-item:nth-child(4)  { animation-delay: 180ms; }
+.gal-item:nth-child(5)  { animation-delay: 240ms; }
+.gal-item:nth-child(6)  { animation-delay: 300ms; }
+.gal-item:nth-child(7)  { animation-delay: 360ms; }
+.gal-item:nth-child(8)  { animation-delay: 420ms; }
+.gal-item:nth-child(9)  { animation-delay: 480ms; }
+.gal-item:nth-child(10) { animation-delay: 540ms; }
+.gal-item:nth-child(11) { animation-delay: 600ms; }
+.gal-item:nth-child(12) { animation-delay: 660ms; }
+.gal-item:nth-child(13) { animation-delay: 720ms; }
+.gal-item:nth-child(14) { animation-delay: 780ms; }
+.gal-item:nth-child(15) { animation-delay: 840ms; }
+.gal-item:nth-child(16) { animation-delay: 900ms; }
+.gal-item:nth-child(17) { animation-delay: 960ms; }
+.gal-item:nth-child(18) { animation-delay: 1020ms; }
 
 @keyframes galFadeIn {
   from { opacity: 0; transform: translateY(20px); }
