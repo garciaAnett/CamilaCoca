@@ -974,6 +974,26 @@ ul, ol { list-style: none; }
   .footer { padding: 1.5rem; }
   .cam-hablemos { width: 160px; right: 2%; top: 2%; bottom: auto; }
   .proj-modal__body { padding: 1.25rem 1.5rem 1.75rem; }
+  .proj-card {
+    flex: 0 0 100%;
+  }
+  .proj-card__img {
+    aspect-ratio: 3/4;
+  }
+  .proj-card h3 {
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+  .proj-card p {
+    font-size: 0.65rem;
+  }
+  .carousel {
+    gap: 0.5rem;
+  }
+  .carousel__btn {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 /* ── Móvil pequeño ≤ 425px ── */
