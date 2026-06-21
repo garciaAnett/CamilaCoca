@@ -107,7 +107,8 @@
 
   function visibleCount() {
     if (window.innerWidth <= 640) return 1;
-    return 2;
+    if (window.innerWidth <= 900) return 2;
+    return 4;
   }
   function maxIndex() { return Math.max(0, track.children.length - visibleCount()); }
 

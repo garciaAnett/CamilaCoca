@@ -459,7 +459,7 @@ ul, ol { list-style: none; }
   will-change: transform;
 }
 .proj-card {
-  flex: 0 0 calc(50% - 0.65rem);
+  flex: 0 0 calc(25% - 0.95rem);
   min-width: 0;
   cursor: pointer;
   opacity: 0;
@@ -474,7 +474,7 @@ ul, ol { list-style: none; }
 }
 .proj-card__img {
   position: relative;
-  aspect-ratio: 3/5;
+  aspect-ratio: 3/4;
   overflow: hidden;
   border-radius: 2px;
   background: var(--cream);
