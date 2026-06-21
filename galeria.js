@@ -47,6 +47,7 @@
   const mImg     = document.getElementById('fotoModalImg');
   const mTitle   = document.getElementById('fotoModalTitle');
   const mLugar   = document.getElementById('fotoModalLugar');
+  const mIg      = document.getElementById('fotoModalIg');
   const mDesc    = document.getElementById('fotoModalDesc');
   const mExp     = document.getElementById('fotoModalExp');
   const carTrack = document.getElementById('fotoCarTrack');
@@ -86,6 +87,13 @@
       mImg.alt           = item.querySelector('img').alt;
       mTitle.textContent = item.dataset.title || '';
       mLugar.textContent = item.dataset.lugar || '';
+      if (item.dataset.instagram) {
+        mIg.href = item.dataset.instagram;
+        mIg.textContent = '@' + item.dataset.instagram.split('/').pop();
+        mIg.style.display = '';
+      } else {
+        mIg.style.display = 'none';
+      }
       mDesc.textContent  = item.dataset.desc  || '';
       mExp.textContent   = item.dataset.experiencia || '';
 
