@@ -345,26 +345,40 @@ body {
   background: rgba(81, 21, 31, 0.08);
 }
 
-/* ── Precio ── */
+/* ── Botón Agenda tu cita ── */
 .foto-modal__cita {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 .foto-modal__cita-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  color: var(--cream);
-  background: var(--wine-deep);
-  padding: 0.85rem 2.4rem;
-  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #fff;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  padding: 1rem 2.6rem;
+  border-radius: 50px;
   text-decoration: none;
-  transition: opacity 0.2s;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+  animation: citaPulse 2s ease-in-out infinite;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .foto-modal__cita-btn:hover {
-  opacity: 0.85;
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+}
+.foto-modal__cita-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+}
+@keyframes citaPulse {
+  0%, 100% { box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35); }
+  50%      { box-shadow: 0 4px 28px rgba(37, 211, 102, 0.6), 0 0 0 8px rgba(37, 211, 102, 0.1); }
 }
 
 /* ── Lightbox foto ampliada ── */
