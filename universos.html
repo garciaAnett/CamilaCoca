@@ -29,8 +29,7 @@
       <p class="uv-sidebar__label">UNIVERSOS</p>
 
       <div class="uv-sidebar__list">
-
-        <div class="uv-sidebar__item uv-sidebar__item--active">
+        <div class="uv-sidebar__item uv-sidebar__item--active" data-key="editorial">
           <div class="uv-sidebar__thumb">
             <img src="imagenes/editorial_Isis_camacho/editorial_isis_camacho4.jpg" alt="Editorial">
           </div>
@@ -40,7 +39,7 @@
           </div>
         </div>
 
-        <div class="uv-sidebar__item">
+        <div class="uv-sidebar__item" data-key="publicitaria">
           <div class="uv-sidebar__thumb">
             <img src="imagenes/publicitaria_final/final.jpg" alt="Publicitaria">
           </div>
@@ -50,7 +49,7 @@
           </div>
         </div>
 
-        <div class="uv-sidebar__item">
+        <div class="uv-sidebar__item" data-key="documental">
           <div class="uv-sidebar__thumb">
             <img src="imagenes/documental/docuemntal.JPG" alt="Documental">
           </div>
@@ -59,7 +58,6 @@
             <p class="uv-sidebar__sub">FOTOGRAFÍA</p>
           </div>
         </div>
-
       </div>
 
       <a href="fotografia.html" class="uv-sidebar__footer">
@@ -69,22 +67,19 @@
     </aside>
 
     <!-- ── MAIN CONTENT ── -->
-    <main class="uv-main">
+    <main class="uv-main" id="uvMain">
 
       <!-- HERO -->
       <section class="uv-hero">
-        <img class="uv-hero__bg" src="imagenes/editorial_valentina_ponce/editorial_Valentina_Ponce.jpg" alt="Editorial">
+        <img class="uv-hero__bg" id="uvHeroBg" src="" alt="">
         <div class="uv-hero__overlay"></div>
 
         <div class="uv-hero__content">
-          <p class="uv-hero__breadcrumb">FOTOGRAFÍA EDITORIAL</p>
-          <h1 class="uv-hero__title">EDITORIAL</h1>
+          <p class="uv-hero__breadcrumb" id="uvBreadcrumb"></p>
+          <h1 class="uv-hero__title" id="uvTitle"></h1>
           <div class="uv-hero__diamond">✦</div>
-          <p class="uv-hero__desc">
-            Serie fotográfica que explora la belleza, la expresión y la narrativa visual.<br>
-            Cada imagen es una historia construida con luz, dirección y sensibilidad artística.
-          </p>
-          <p class="uv-hero__quote">"La luz no ilumina objetos, revela historias."</p>
+          <p class="uv-hero__desc" id="uvDesc"></p>
+          <p class="uv-hero__quote" id="uvQuote"></p>
           <a href="fotografia.html" class="uv-hero__btn">
             VER GALERÍA
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -94,142 +89,24 @@
         <!-- STATUS PANEL -->
         <div class="uv-status">
           <p class="uv-status__title">ESTADO DEL PROYECTO</p>
-          <div class="uv-status__list">
-            <div class="uv-status__item">
-              <div class="uv-status__row">
-                <span>DIRECCIÓN ARTÍSTICA</span>
-                <span>90%</span>
-              </div>
-              <div class="uv-bar"><div class="uv-bar__fill" style="width:90%"></div></div>
-            </div>
-            <div class="uv-status__item">
-              <div class="uv-status__row">
-                <span>ILUMINACIÓN</span>
-                <span>85%</span>
-              </div>
-              <div class="uv-bar"><div class="uv-bar__fill" style="width:85%"></div></div>
-            </div>
-            <div class="uv-status__item">
-              <div class="uv-status__row">
-                <span>RETOQUE</span>
-                <span>75%</span>
-              </div>
-              <div class="uv-bar"><div class="uv-bar__fill" style="width:75%"></div></div>
-            </div>
-            <div class="uv-status__item">
-              <div class="uv-status__row">
-                <span>ESTILISMO</span>
-                <span>70%</span>
-              </div>
-              <div class="uv-bar"><div class="uv-bar__fill" style="width:70%"></div></div>
-            </div>
-            <div class="uv-status__item">
-              <div class="uv-status__row">
-                <span>NARRATIVA VISUAL</span>
-                <span>80%</span>
-              </div>
-              <div class="uv-bar"><div class="uv-bar__fill" style="width:80%"></div></div>
-            </div>
-          </div>
+          <div class="uv-status__list" id="uvStatusList"></div>
         </div>
       </section>
 
-      <!-- SUB-GRID: 4 SECCIONES -->
-      <div class="uv-sub-grid">
+      <!-- SUB-GRID -->
+      <div class="uv-sub-grid" id="uvSubGrid"></div>
 
-        <div class="uv-sub">
-          <span class="uv-sub__num">01. LA IDEA</span>
-          <div class="uv-sub__img">
-            <img src="imagenes/editorial_lu/foto Lu.JPG" alt="La idea">
-          </div>
-          <p class="uv-sub__text">Cada sesión nace de un concepto visual. La idea define la atmósfera, los colores y la historia que se quiere contar.</p>
-          <a href="fotografia.html" class="uv-sub__link">VER MÁS →</a>
-        </div>
-
-        <div class="uv-sub">
-          <span class="uv-sub__num">02. LA DIRECCIÓN</span>
-          <div class="uv-sub__img">
-            <img src="imagenes/editorial_fashion/Ediorial_Fashion.jpg" alt="La dirección">
-          </div>
-          <p class="uv-sub__text">La dirección artística guía cada elemento en escena: poses, expresiones, vestuario y ambiente para lograr la imagen soñada.</p>
-          <a href="fotografia.html" class="uv-sub__link">VER MÁS →</a>
-        </div>
-
-        <div class="uv-sub uv-sub--list">
-          <span class="uv-sub__num">03. EL PROCESO</span>
-          <ul class="uv-sub__checklist">
-            <li>Concepto y moodboard previo</li>
-            <li>Selección de locación e iluminación</li>
-            <li>Dirección en set con equipo</li>
-            <li>Selección y edición de imágenes</li>
-            <li>Retoque artístico y entrega</li>
-          </ul>
-          <a href="fotografia.html" class="uv-sub__link">VER MÁS →</a>
-        </div>
-
-        <div class="uv-sub uv-sub--quote">
-          <span class="uv-sub__num">04. FRAGMENTO</span>
-          <div class="uv-sub__quote-mark">"</div>
-          <p class="uv-sub__quote-text">
-            Fotografiar no es solo apretar un botón.<br>
-            Es ver antes que todos,<br>
-            y guardar lo que nadie más notó.
-          </p>
-          <a href="fotografia.html" class="uv-sub__link">LEER MÁS →</a>
-        </div>
-
-      </div>
-
-      <!-- BOTTOM ROW: MODELOS + VISUAL BOARD -->
+      <!-- BOTTOM ROW -->
       <div class="uv-bottom-row">
-
         <div class="uv-personas">
-          <span class="uv-sub__num">05. MODELOS &amp; COLABORADORES</span>
-          <div class="uv-personas__grid">
-            <div class="uv-persona">
-              <div class="uv-persona__img">
-                <img src="imagenes/editorial_valentina_ponce/editorial_Valentina_Ponce.jpg" alt="Valentina Ponce">
-              </div>
-              <p class="uv-persona__name">VALENTINA PONCE</p>
-              <p class="uv-persona__role">MODELO</p>
-            </div>
-            <div class="uv-persona">
-              <div class="uv-persona__img">
-                <img src="imagenes/editorial_Isis_camacho/editorial_isis_camacho.jpg" alt="Isis Camacho">
-              </div>
-              <p class="uv-persona__name">ISIS CAMACHO</p>
-              <p class="uv-persona__role">MODELO</p>
-            </div>
-            <div class="uv-persona uv-persona--lock">
-              <div class="uv-persona__img uv-persona__img--lock">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-              </div>
-              <p class="uv-persona__name">PRÓXIMO</p>
-              <p class="uv-persona__role">EN DESARROLLO</p>
-            </div>
-            <div class="uv-persona uv-persona--lock">
-              <div class="uv-persona__img uv-persona__img--lock">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-              </div>
-              <p class="uv-persona__name">PRÓXIMO</p>
-              <p class="uv-persona__role">EN DESARROLLO</p>
-            </div>
-          </div>
+          <span class="uv-sub__num" id="uvPersonasLabel">05. COLABORADORES</span>
+          <div class="uv-personas__grid" id="uvPersonasGrid"></div>
         </div>
-
         <div class="uv-board">
           <span class="uv-sub__num">06. VISUAL BOARD</span>
-          <div class="uv-board__grid">
-            <img src="imagenes/editorial_Isis_camacho/editorial_isis_camacho2.jpg" alt="">
-            <img src="imagenes/editorial_Isis_camacho/editorial_isis_camacho3.jpg" alt="">
-            <img src="imagenes/editorial_valentina_ponce/editorial_Valentina_Ponce1.jpg" alt="">
-            <img src="imagenes/editorial_valentina_ponce/editorial_Valentina_Ponce2.jpg" alt="">
-            <img src="imagenes/editorial_lu/fotoLu1.jpg" alt="">
-            <img src="imagenes/editorial_fashion/Ediorial_Fashion2.jpg" alt="">
-          </div>
+          <div class="uv-board__grid" id="uvBoardGrid"></div>
           <a href="fotografia.html" class="uv-sub__link">VER MÁS →</a>
         </div>
-
       </div>
 
     </main>

@@ -154,7 +154,9 @@
 .uv-main {
   background: var(--bg);
   overflow: hidden;
+  transition: opacity 0.22s ease;
 }
+.uv-main.uv-fade { opacity: 0; }
 
 /* ── HERO ── */
 .uv-hero {
