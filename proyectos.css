@@ -234,6 +234,14 @@
   50%       { box-shadow: 0 4px 28px rgba(81,21,31,0.6), 0 0 0 8px rgba(81,21,31,0.12); }
 }
 
+/* grilla de 2 columnas para proyectos con pocas imágenes */
+.pj-grid--2col {
+  grid-template-columns: 1fr 1fr;
+}
+.pj-grid--2col .pj-grid__item {
+  grid-column: span 1;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .pj-hero__content { padding: 2rem 1.5rem; }
