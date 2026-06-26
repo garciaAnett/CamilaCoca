@@ -50,6 +50,7 @@
   const mIg      = document.getElementById('fotoModalIg');
   const mDesc    = document.getElementById('fotoModalDesc');
   const mExp     = document.getElementById('fotoModalExp');
+  const mExpBlock = document.getElementById('fotoModalExpBlock');
   const carTrack = document.getElementById('fotoCarTrack');
   const carPrev  = document.getElementById('fotoCarPrev');
   const carNext  = document.getElementById('fotoCarNext');
@@ -95,7 +96,9 @@
         mIg.style.display = 'none';
       }
       mDesc.textContent  = item.dataset.desc  || '';
-      mExp.textContent   = item.dataset.experiencia || '';
+      var expText = item.dataset.experiencia || '';
+      mExp.textContent = expText;
+      if (mExpBlock) mExpBlock.style.display = expText ? '' : 'none';
 
       carTrack.innerHTML = '';
       carCurrent = 0;
